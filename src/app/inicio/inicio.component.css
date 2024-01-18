@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+#bienvenida {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#sobre-nosotros, #servicios {
+    background-color: #e2e2e2;
+}
+
+.servicio {
+    background-color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}

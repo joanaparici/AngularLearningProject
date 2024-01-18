@@ -1,0 +1,28 @@
+<div>
+    <h3 class="text-center">Articulo seleccionado </h3>
+    <table>     
+      <!-- Aquí dentro podríamos usar articuloSeleccionado.id etc, pero tendríamos problemas con el two way data blinding así que en el componente hemos creado variables para guardar los datos -->
+      <tr>
+        <td>id:</td>
+        <td><input type="text" [(ngModel)]="id"> </td> 
+      </tr>
+      <tr>
+        <td>npmbre:</td>
+        <td><input type="text" [(ngModel)]="nombre"> </td>
+      </tr>
+      <tr>
+        <td>descripcion:</td>
+        <td><input type="text" [(ngModel)]="descripcion"> </td>
+      </tr>
+      <tr>
+        <td>precio:</td>
+        <td><input type="text" [(ngModel)]="precio"> </td>
+      </tr>
+      <tr>
+
+      </tr>
+    </table>
+    <div class="text-center">
+      <button (click)="anyadir()" class="btn btn-primary">Añadir articulo</button>&nbsp;
+      <button (click)="cancelar()" class="btn btn-success">Cancelar</button>
+    </div>

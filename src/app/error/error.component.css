@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+}
+
+.container-404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.container-404 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container-404 p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container-404 a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 20px;
+}
+
+.container-404 a:hover {
+    text-decoration: underline;
+}
