@@ -1,0 +1,22 @@
+<h1>Borrar articulo</h1>
+<div *ngIf="articulo">
+  <h3>
+    ¿Estás seguro de que quieres borrar el artículo {{ articulo.nombre }}?
+  </h3>
+  {{ articulo.id }}
+  {{ articulo.nombre }}
+  {{ articulo.descripcion }}
+  {{ articulo.precio }}
+  <button
+    
+    routerLink="/articulos"
+    (click)="borrarArticulo()"
+    class="btn btn-danger"
+  >
+    Borrar
+  </button>
+  <button routerLink="/articulos" class="btn btn-primary">Cancelar</button>
+</div>
+<div *ngIf="!articulo">
+  <h3>Artículo no encontrado</h3>
+</div>

@@ -13,13 +13,16 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ErrorComponent } from './error/error.component';
 import { ArticuloNuevoComponent } from './articulo-nuevo/articulo-nuevo.component';
 import { ModificarArticuloComponent } from './modificar-articulo/modificar-articulo.component';
+import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'indice', component: IndiceComponent },
   { path: 'articulos', component: Ejemplo5Component },
+  { path: 'ejemplo5', component: Ejemplo5Component },
   { path: 'articulos/nuevo', component: ArticuloNuevoComponent },
   { path: 'articulos/modificar/:id', component: ModificarArticuloComponent},
+  { path: 'articulos/borrar/:id', component: BorraArticuloComponent},
   { path: 'ejemplo1', component: Ejemplo1Component },
   { path: 'ejemplo2', component: Ejemplo2Component },
   { path: 'ejemplo3', component: Ejemplo3Component },
@@ -27,7 +30,6 @@ const routes: Routes = [
   { path: 'ejemplo4', component: Ejemplo4Component },
   { path: 'ejemplo4v2', component: Ejemplo4v2Component },
   { path: 'ejemplo4v4', component: Ejemplo4v4Component },
-  { path: 'ejemplo5', component: Ejemplo5Component },
   { path: '**', component: ErrorComponent}
 ];
 

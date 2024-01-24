@@ -24,6 +24,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ErrorComponent } from './error/error.component';
 import { ArticuloNuevoComponent } from './articulo-nuevo/articulo-nuevo.component';
 import { ModificarArticuloComponent } from './modificar-articulo/modificar-articulo.component';
+import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ModificarArticuloComponent } from './modificar-articulo/modificar-artic
     InicioComponent,
     ErrorComponent,
     ArticuloNuevoComponent,
-    ModificarArticuloComponent
+    ModificarArticuloComponent,
+    BorraArticuloComponent
   ],
   imports: [
     BrowserModule,

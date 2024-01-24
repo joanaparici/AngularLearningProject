@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+      import { Component } from '@angular/core';
 import { Articulo } from '../Modelos/articulo';
 import { ArticulosService } from '../Servicios/articulos.service';
 import { Router } from '@angular/router';

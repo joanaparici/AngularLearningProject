@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './modificar-articulo.component.html',
   styleUrls: ['./modificar-articulo.component.css'],
 })
-export class ModificarArticuloComponent implements OnInit{
+export class ModificarArticuloComponent implements OnInit {
   articuloSeleccionado!: Articulo | null;
   id!: string;
   nombre!: string;
@@ -22,18 +22,19 @@ export class ModificarArticuloComponent implements OnInit{
   ) {}
 
   ngOnInit() {
-    
-    this.route.paramMap.subscribe((params) => {
-      this.id = params.get('id')!;
-      //Obtener el articulo del servicio
-      this.articuloSeleccionado = this.servicioArticulos.getArticulo(this.id);
-      if (this.articuloSeleccionado) {
-        // Actualiza las propiedades del componente con los datos del artículo
-        this.nombre = this.articuloSeleccionado.nombre;
-        this.descripcion = this.articuloSeleccionado.descripcion;
-        this.precio = this.articuloSeleccionado.precio;
-      }
-    });
+    // this.route.paramMap.subscribe((params) => {
+    //   this.id = params.get('id')!;
+    //Esta manera es más fácil y no necesita el suscribe
+    this.id = this.route.snapshot.paramMap.get('id')!;
+    //Obtener el articulo del servicio
+    this.articuloSeleccionado = this.servicioArticulos.getArticulo(this.id);
+    if (this.articuloSeleccionado) {
+      // Actualiza las propiedades del componente con los datos del artículo
+      this.nombre = this.articuloSeleccionado.nombre;
+      this.descripcion = this.articuloSeleccionado.descripcion;
+      this.precio = this.articuloSeleccionado.precio;
+    }
+    // });
   }
   // ngOnInit() {
   //   this.articulos = this.servicioArticulos.getArticulos(); //Inicializamos esto para poder interpolar en el html
@@ -41,8 +42,6 @@ export class ModificarArticuloComponent implements OnInit{
   //     // this.id = params.get('id');
 
   // }
-
-
 
   modificar() {
     if (this.articuloSeleccionado != null) {

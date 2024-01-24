@@ -16,10 +16,10 @@
       <td>{{articulo.descripcion}}</td>
       <td>{{articulo.precio}}</td>
       <td>
-        <button [routerLink]="['/articulos/modificar', articulo.id]" class="btn btn-primary">Ver</button>
+        <button [routerLink]="['/articulos/modificar', articulo.id]" class="btn btn-primary">Modificar</button>
       </td>
       <td>
-        <button (click)="borrar(articulo.id)" class="btn btn-danger">Borrar</button>
+        <button [routerLink]="['/articulos/borrar', articulo.id]" class="btn btn-danger">Borrar</button>
       </td>
     </tr>
 </table>
