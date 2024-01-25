@@ -14,12 +14,16 @@ import { ErrorComponent } from './error/error.component';
 import { ArticuloNuevoComponent } from './articulo-nuevo/articulo-nuevo.component';
 import { ModificarArticuloComponent } from './modificar-articulo/modificar-articulo.component';
 import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
+import { FiltroComponent } from './filtro/filtro.component';
+import { ArticuloFiltradoComponent } from './articulo-filtrado/articulo-filtrado.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'indice', component: IndiceComponent },
+  { path: 'filtro', component: FiltroComponent},
   { path: 'articulos', component: Ejemplo5Component },
   { path: 'ejemplo5', component: Ejemplo5Component },
+  { path: 'articulosFiltrados', component: ArticuloFiltradoComponent},
   { path: 'articulos/nuevo', component: ArticuloNuevoComponent },
   { path: 'articulos/modificar/:id', component: ModificarArticuloComponent},
   { path: 'articulos/borrar/:id', component: BorraArticuloComponent},

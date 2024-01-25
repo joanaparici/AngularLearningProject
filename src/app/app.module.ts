@@ -25,6 +25,8 @@ import { ErrorComponent } from './error/error.component';
 import { ArticuloNuevoComponent } from './articulo-nuevo/articulo-nuevo.component';
 import { ModificarArticuloComponent } from './modificar-articulo/modificar-articulo.component';
 import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
+import { FiltroComponent } from './filtro/filtro.component';
+import { ArticuloFiltradoComponent } from './articulo-filtrado/articulo-filtrado.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { BorraArticuloComponent } from './borra-articulo/borra-articulo.componen
     ErrorComponent,
     ArticuloNuevoComponent,
     ModificarArticuloComponent,
-    BorraArticuloComponent
+    BorraArticuloComponent,
+    FiltroComponent,
+    ArticuloFiltradoComponent
   ],
   imports: [
     BrowserModule,
