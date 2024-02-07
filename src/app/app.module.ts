@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +29,8 @@ import { ModificarArticuloComponent } from './modificar-articulo/modificar-artic
 import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { ArticuloFiltradoComponent } from './articulo-filtrado/articulo-filtrado.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 @NgModule({
@@ -53,12 +57,15 @@ import { ArticuloFiltradoComponent } from './articulo-filtrado/articulo-filtrado
     ModificarArticuloComponent,
     BorraArticuloComponent,
     FiltroComponent,
-    ArticuloFiltradoComponent
+    ArticuloFiltradoComponent,
+    ClientesComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

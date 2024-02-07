@@ -1,0 +1,63 @@
+<div>
+  <h4>Listado de Clientes</h4>
+  <br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <th scope="row">{{ cliente.id }}</th>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.cargo }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="ver(cliente.id)">Ver</button>
+        </td>
+        <td>    <button class="btn btn-danger" (click)="borrarCliente(cliente.id)">
+          Borrar Cliente
+        </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h4>Nuevo Cliente</h4>
+  <div class="form-group">
+    <label for="id">Id:</label>&nbsp;
+    <input type="number" size="3" id="id" [(ngModel)]="clienteNuevo.id" />&nbsp;
+    <label for="id">Nombre:</label>&nbsp;
+    <input type="text" id="nombre" [(ngModel)]="clienteNuevo.nombre" />&nbsp;
+    <label for="id">Cargo:</label>&nbsp;
+    <input type="text" id="cargo" [(ngModel)]="clienteNuevo.cargo" />&nbsp;
+    <button class="btn btn-success" (click)="nuevoCliente()">
+      Nuevo Cliente
+    </button>
+  </div>
+</div>
+
+<div>
+  <h4>Buscar Cliente</h4>
+  <div class="form-group">
+    <label for="id">Id:</label>&nbsp;
+    <input type="number" size="3" id="id" [(ngModel)]="idCliente" />&nbsp;
+    <button class="btn btn-primary" (click)="verCliente()">
+      Buscar Cliente
+    </button>
+  </div>
+  <div class="form-group">
+    <label for="id">Id:</label>&nbsp;
+    <input type="text" size="3" id="id" [(ngModel)]="cliente.id" />&nbsp;
+    <label for="id">Nombre:</label>&nbsp;
+    <input type="text" id="nombre" [(ngModel)]="cliente.nombre" />&nbsp;
+    <label for="id">Cargo:</label>&nbsp;
+    <input type="text" id="cargo" [(ngModel)]="cliente.cargo" />&nbsp;
+    <button class="btn btn-warning" (click)="modificarCliente()">
+      Modificar Cliente
+    </button>
+  </div>
+</div>

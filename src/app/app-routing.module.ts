@@ -16,11 +16,14 @@ import { ModificarArticuloComponent } from './modificar-articulo/modificar-artic
 import { BorraArticuloComponent } from './borra-articulo/borra-articulo.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { ArticuloFiltradoComponent } from './articulo-filtrado/articulo-filtrado.component';
+import { Guarda1Guard } from './Guards/guarda1.guard';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'indice', component: IndiceComponent },
-  { path: 'filtro', component: FiltroComponent},
+  { path: 'filtro', canActivate:[Guarda1Guard],component: FiltroComponent},
+  { path: 'clientes', component: ClientesComponent},
   { path: 'articulos', component: Ejemplo5Component },
   { path: 'ejemplo5', component: Ejemplo5Component },
   { path: 'articulosFiltrados', component: ArticuloFiltradoComponent},
